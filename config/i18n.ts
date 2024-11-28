@@ -63,6 +63,11 @@ export const dictionaries = {
     },
     contact: {
       title: 'Contact Me',
+      description: 'Feel free to reach out via email for collaborations, questions, or just to say hi!',
+      tips: 'Quick Tips',
+      tip1: 'Please include a brief introduction about yourself',
+      tip2: 'Mention the purpose of your email for faster response',
+      copied: 'Email copied to clipboard!',
       name: 'Name',
       email: 'Email',
       message: 'Message',
@@ -81,10 +86,10 @@ export const dictionaries = {
     },
   },
   zh: {
-    name: '肖鉴津',
+    name: 'Jackie Xiao',
     chineseName: '肖鉴津',
     motto: '爱与自由，毕生所求；学与创造，至死方休',
-    role: '少错科技创始人 / 语音算法工程师 / 全栈工程师',
+    role: '少错科技创始人 / 全栈工程师 / 语音算法工程师 ',
     about: {
       title: '关于我',
       description: '热爱探索和创造的技术爱好者',
@@ -137,6 +142,11 @@ export const dictionaries = {
     },
     contact: {
       title: '联系我',
+      description: '欢迎通过邮件联系我，无论是合作、提问，还是打个招呼！',
+      tips: '小贴士',
+      tip1: '请简单介绍一下自己',
+      tip2: '说明邮件目的，以便更快收到回复',
+      copied: '邮箱已复制到剪贴板！',
       name: '姓名',
       email: '邮箱',
       message: '留言',

@@ -1,68 +1,82 @@
 "use client"
 
-import { useState } from "react"
 import { useLanguage } from "@/components/language-provider"
-import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { toast } from "@/components/ui/use-toast"
+import { motion } from "framer-motion"
+import { useState } from "react"
 
 export function ContactForm() {
   const { t } = useLanguage()
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isCopied, setIsCopied] = useState(false)
+  const email = "jackie.xiao@outlook.com"
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    const formData = new FormData(e.currentTarget)
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    }
-
+  const handleCopy = async () => {
     try {
-      // Here you would typically send the data to your backend
-      // For now, we'll just simulate a success response
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      toast({
-        title: t("contact.success"),
-        description: t("contact.successMessage"),
-      })
-      e.currentTarget.reset()
-    } catch (error) {
-      toast({
-        title: t("contact.error"),
-        description: t("contact.errorMessage"),
-        variant: "destructive",
-      })
-    } finally {
-      setIsSubmitting(false)
+      await navigator.clipboard.writeText(email)
+      setIsCopied(true)
+      setTimeout(() => setIsCopied(false), 2000)
+    } catch (err) {
+      console.error("Failed to copy email:", err)
     }
   }
 
   return (
-    <Card className="p-6">
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="space-y-2">
-          <Label htmlFor="name">{t("contact.name")}</Label>
-          <Input id="name" name="name" required />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="email">{t("contact.email")}</Label>
-          <Input id="email" name="email" type="email" required />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="message">{t("contact.message")}</Label>
-          <Textarea id="message" name="message" required />
-        </div>
-        <Button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? t("contact.sending") : t("contact.send")}
-        </Button>
-      </form>
-    </Card>
+    <section className="container py-8 md:py-12 lg:py-24">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="terminal-header text-3xl font-bold leading-[1.1] mb-3">
+          {t("contact.title")}
+        </h2>
+        <Card className="max-w-2xl">
+          <div className="p-6 space-y-4">
+            <div className="space-y-2">
+              <div className="terminal-text">
+                <span className="terminal-prompt"></span>
+                <span className="text-[hsl(var(--terminal-yellow))]">mail</span>
+                <span className="text-[hsl(var(--terminal-blue))]"> --to </span>
+                <button
+                  onClick={handleCopy}
+                  className="text-[hsl(var(--terminal-green))] hover:text-[hsl(var(--terminal-cyan))] transition-colors cursor-pointer"
+                >
+                  {email}
+                </button>
+              </div>
+              {isCopied && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  className="text-sm text-[hsl(var(--terminal-green))]"
+                >
+                  ✓ {t("contact.copied")}
+                </motion.div>
+              )}
+              <p className="text-sm text-muted-foreground mt-4">
+                {t("contact.description")}
+              </p>
+            </div>
+            <div className="space-y-1 text-sm text-muted-foreground">
+              <div className="terminal-text">
+                <span className="text-[hsl(var(--terminal-blue))]"># {t("contact.tips")}</span>
+              </div>
+              <div className="pl-4">
+                <div className="terminal-text">
+                  <span className="text-[hsl(var(--terminal-green))]">1. </span>
+                  {t("contact.tip1")}
+                </div>
+                <div className="terminal-text">
+                  <span className="text-[hsl(var(--terminal-green))]">2. </span>
+                  {t("contact.tip2")}
+                </div>
+              </div>
+            </div>
+          </div>
+        </Card>
+      </motion.div>
+    </section>
   )
 }

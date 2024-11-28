@@ -76,7 +76,7 @@ export function Testimonials() {
                 </div>
               </div>
               <blockquote className="mt-4 text-muted-foreground">
-                "{testimonial.content}"
+                {testimonial.content}
               </blockquote>
             </CardContent>
           </Card>

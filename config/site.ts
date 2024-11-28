@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Jackie Xiao",
+  name: "jackiexiao极客",
   description: "Jackie Xiao's personal website - Full-stack developer, AI enthusiast, and founder of 01MVP",
   mainNav: [
     {

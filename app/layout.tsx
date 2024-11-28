@@ -44,24 +44,24 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: "/avatar.jpg",
+        width: 400,
+        height: 400,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
     creator: "@realjackiexiao",
+    images: ["/avatar.jpg"],
   },
   icons: {
-    icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "any",
-      },
-      {
-        url: "/avatar.jpg",
-        type: "image/jpeg",
-      },
-    ],
+    icon: "/avatar.jpg",
+    shortcut: "/avatar.jpg",
     apple: "/avatar.jpg",
   },
 }

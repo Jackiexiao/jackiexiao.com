@@ -156,7 +156,7 @@ export default function IndexPage() {
               </div>
               <div className="mt-6">
                 <Image
-                  src="/life.jpg"
+                  src="/life.png"
                   alt="Life Photo"
                   width={400}
                   height={300}
