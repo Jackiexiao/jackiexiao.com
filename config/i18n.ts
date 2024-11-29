@@ -33,11 +33,11 @@ export const dictionaries = {
     community: {
       hackweek: {
         title: 'HackathonWeekly',
-        description: 'Take 1 week to create 1 MVP, solve 1 pain point, and maybe it will be the next world-changing product',
+        description: 'Take 1 week to create 1 MVP, solve 1 pain point, and maybe it will be the next world-changing product. Founded by Jackie Xiao.',
       },
       mvp: {
         title: '01MVP',
-        description: 'From 0 to 1, turn ideas into products quickly. AI-driven tools and creator community to help makers build MVPs in the shortest time.',
+        description: 'From 0 to 1, turn ideas into products quickly. AI-driven tools and creator community to help makers build MVPs in the shortest time. Founded by Jackie Xiao.',
       },
     },
     skills: {
@@ -112,11 +112,11 @@ export const dictionaries = {
     community: {
       hackweek: {
         title: '周周黑客松',
-        description: '花1周时间，创造1个最小可行产品，解决1个生活痛点，也许就是下1个改变世界的起点',
+        description: '花1周时间，创造1个最小可行产品，解决1个生活痛点，也许就是下1个改变世界的起点。由Jackie Xiao发起。',
       },
       mvp: {
         title: '01MVP',
-        description: '从0到1，让创意快速变成产品。01MVP 通过 AI 驱动的工具和创造者社区，帮助创造者用最短时间打造最小可行产品（MVP）。',
+        description: '从0到1，让创意快速变成产品。01MVP 通过 AI 驱动的工具和创造者社区，帮助创造者用最短时间打造最小可行产品（MVP）。由Jackie Xiao发起。',
       },
     },
     skills: {

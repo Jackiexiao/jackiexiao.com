@@ -6,7 +6,6 @@ import { useLanguage } from '@/components/language-provider'
 import { buttonVariants } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { siteConfig } from '@/config/site'
-import { SkillsSection } from '@/components/skills-section'
 import { Testimonials } from '@/components/testimonials'
 import { ContactForm } from '@/components/contact-form'
 import { AnimatedSection } from '@/components/animated-section'
@@ -24,7 +23,7 @@ export default function IndexPage() {
             <h2 className="text-2xl text-muted-foreground">{t('chineseName')}</h2>
             <p className="text-xl font-medium">{t('motto')}</p>
             <p className="text-lg text-muted-foreground">{t('role')}</p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4 items-center mt-4">
               <Link
                 href={siteConfig.links.github}
                 target="_blank"
@@ -41,6 +40,36 @@ export default function IndexPage() {
               >
                 Blog
               </Link>
+              <div className="flex gap-4 items-center ml-4">
+                <Image
+                  src="/tech/python.svg"
+                  alt="Python"
+                  width={24}
+                  height={24}
+                  className="opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <Image
+                  src="/tech/pytorch.svg"
+                  alt="PyTorch"
+                  width={24}
+                  height={24}
+                  className="opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <Image
+                  src="/tech/nextjs.svg"
+                  alt="Next.js"
+                  width={24}
+                  height={24}
+                  className="opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <Image
+                  src="/tech/react.svg"
+                  alt="React"
+                  width={24}
+                  height={24}
+                  className="opacity-70 hover:opacity-100 transition-opacity"
+                />
+              </div>
             </div>
           </div>
           <div className="relative w-48 h-48 md:w-64 md:h-64">
@@ -172,7 +201,36 @@ export default function IndexPage() {
       <AnimatedSection delay={800}>
         <section id="skills" className="py-8">
           <h2 className="text-3xl font-bold mb-6">{t('skills.title')}</h2>
-          <SkillsSection />
+          <div className="flex flex-wrap gap-4 items-center">
+            <Image
+              src="/tech/python.svg"
+              alt="Python"
+              width={48}
+              height={48}
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/tech/pytorch.svg"
+              alt="PyTorch"
+              width={48}
+              height={48}
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/tech/nextjs.svg"
+              alt="Next.js"
+              width={48}
+              height={48}
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/tech/react.svg"
+              alt="React"
+              width={48}
+              height={48}
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            />
+          </div>
         </section>
       </AnimatedSection>
 

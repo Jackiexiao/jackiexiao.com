@@ -1,9 +1,8 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { useLanguage } from "@/components/language-provider"
 import { Card, CardContent } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
+import { motion } from "framer-motion"
 
 type Testimonial = {
   id: number
@@ -15,7 +14,6 @@ type Testimonial = {
 
 export function Testimonials() {
   const { t } = useLanguage()
-  const [activeIndex, setActiveIndex] = useState(0)
 
   const testimonials: Testimonial[] = [
     {
@@ -41,32 +39,20 @@ export function Testimonials() {
     },
   ]
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((current) =>
-        current === testimonials.length - 1 ? 0 : current + 1
-      )
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [testimonials.length])
-
   return (
-    <div className="relative overflow-hidden">
-      <div
-        className="flex transition-transform duration-500 ease-out"
-        style={{
-          transform: `translateX(-${activeIndex * 100}%)`,
-        }}
-      >
-        {testimonials.map((testimonial) => (
-          <Card
-            key={testimonial.id}
-            className="w-full flex-shrink-0 mx-4 bg-card/50 backdrop-blur"
-          >
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {testimonials.map((testimonial, index) => (
+        <motion.div
+          key={testimonial.id}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1 }}
+        >
+          <Card className="h-full bg-card/50 backdrop-blur hover:shadow-md transition-shadow">
             <CardContent className="p-6">
-              <div className="flex items-center space-x-4">
-                <div className="relative w-12 h-12">
-                  <div className="w-12 h-12 rounded-full bg-secondary" />
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="relative w-10 h-10">
+                  <div className="w-10 h-10 rounded-full bg-primary/10" />
                 </div>
                 <div>
                   <div className="font-medium">{testimonial.name}</div>
@@ -75,25 +61,13 @@ export function Testimonials() {
                   </div>
                 </div>
               </div>
-              <blockquote className="mt-4 text-muted-foreground">
-                {testimonial.content}
+              <blockquote className="text-sm text-muted-foreground">
+                "{testimonial.content}"
               </blockquote>
             </CardContent>
           </Card>
-        ))}
-      </div>
-      <div className="flex justify-center mt-4 space-x-2">
-        {testimonials.map((_, index) => (
-          <button
-            key={index}
-            className={cn(
-              "w-2 h-2 rounded-full transition-colors",
-              index === activeIndex ? "bg-primary" : "bg-secondary"
-            )}
-            onClick={() => setActiveIndex(index)}
-          />
-        ))}
-      </div>
+        </motion.div>
+      ))}
     </div>
   )
 }

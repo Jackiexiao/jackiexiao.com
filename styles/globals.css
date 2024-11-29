@@ -6,51 +6,51 @@
 
 @layer base {
   :root {
-    /* 深蓝黑背景 */
-    --background: 220 18% 10%;
-    --foreground: 220 15% 90%;
+    /* 明亮的背景 */
+    --background: 220 30% 96%;
+    --foreground: 220 25% 10%;
 
-    /* 稍微亮一点的卡片背景 */
-    --card: 220 16% 13%;
-    --card-foreground: 220 15% 90%;
+    /* 白色卡片背景 */
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
 
     /* 弹出层 */
-    --popover: 220 16% 13%;
-    --popover-foreground: 220 15% 90%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
 
-    /* 主色调：柔和的青绿色 */
-    --primary: 180 40% 60%;
-    --primary-foreground: 220 18% 10%;
+    /* 主色调：科技蓝 */
+    --primary: 220 85% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    /* 次要色调：深青色 */
-    --secondary: 180 30% 45%;
-    --secondary-foreground: 220 15% 90%;
+    /* 次要色调：浅灰 */
+    --secondary: 220 15% 90%;
+    --secondary-foreground: 220 25% 10%;
 
     /* 静音色调 */
-    --muted: 220 16% 16%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 25% 40%;
 
-    /* 强调色：深蓝色 */
-    --accent: 220 40% 50%;
-    --accent-foreground: 220 15% 90%;
+    /* 强调色：明亮的蓝色 */
+    --accent: 220 85% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    /* 危险色：柔和的红色 */
-    --destructive: 0 60% 50%;
-    --destructive-foreground: 220 15% 90%;
+    /* 危险色：鲜艳的红色 */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
 
     /* 边框和输入框 */
-    --border: 180 30% 45%;
-    --input: 220 16% 16%;
-    --ring: 180 40% 60%;
-    --radius: 0;
+    --border: 220 15% 90%;
+    --input: 220 15% 95%;
+    --ring: 220 85% 55%;
+    --radius: 0.5rem;
 
     /* Terminal specific colors */
-    --terminal-green: 180 40% 60%;
-    --terminal-yellow: 40 40% 60%;
-    --terminal-blue: 220 40% 60%;
-    --terminal-red: 0 40% 60%;
-    --terminal-cyan: 180 40% 60%;
-    --terminal-magenta: 300 40% 60%;
+    --terminal-green: 142 70% 45%;
+    --terminal-yellow: 40 85% 50%;
+    --terminal-blue: 220 85% 55%;
+    --terminal-red: 0 85% 60%;
+    --terminal-cyan: 180 70% 45%;
+    --terminal-magenta: 300 85% 50%;
   }
 
   * {
