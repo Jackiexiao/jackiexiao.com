@@ -1,0 +1,21 @@
+component: http
+name: jackiexiao-com
+inputs:
+  src:
+    dist: ./
+    hook: npm run build
+    exclude:
+      - .env
+  faas:
+    runtime: Nodejs12.16
+    framework: nextjs
+    name: ${name}
+    events:
+      - http:
+          parameters:
+            netConfig:
+              enableIntranet: true
+              enableExtranet: true
+            qualifier: $DEFAULT
+            authType: NONE
+app: jackiexiao-web-demo
