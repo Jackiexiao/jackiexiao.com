@@ -10,7 +10,15 @@ export const dictionaries = {
     name: 'Jackie Xiao',
     chineseName: '肖鉴津',
     motto: 'Love and freedom, lifelong pursuit; learning and creation, until death',
-    role: 'Founder of 01MVP / Voice Algorithm Engineer / Full-stack Developer',
+    role: 'Founder of 01mvp.com / Full-stack Developer',
+    nav: {
+      home: 'Home',
+      projects: 'Projects',
+      community: 'Community',
+      about: 'About',
+      blog: 'Blog',
+      contact: 'Contact',
+    },
     about: {
       title: 'About Me',
       description: 'A curious tech enthusiast who loves building products',
@@ -28,7 +36,35 @@ export const dictionaries = {
     projects: {
       title: 'Projects',
       aiProjects: 'AI-Powered Projects',
+      aiNote: 'Examples of projects I completed with AI in 20-120 minutes',
       tools: 'Tools',
+      items: {
+        hackweek: {
+          title: 'HackathonWeekly',
+          description: 'Weekly hackathon community for rapid product development',
+          url: 'https://hackathonweekly.com',
+        },
+        mvp: {
+          title: '01MVP',
+          description: 'AI-powered tools and community for MVP builders',
+          url: 'https://01mvp.com',
+        },
+        voiceClone: {
+          title: 'Voice Clone Studio',
+          description: 'Create your digital voice twin in minutes',
+          note: 'Built in 90 minutes with ChatGPT',
+        },
+        imageGen: {
+          title: 'AI Image Generator',
+          description: 'Generate and edit images with natural language',
+          note: 'Built in 60 minutes with Claude',
+        },
+        codeHelper: {
+          title: 'Code Assistant',
+          description: 'AI-powered code generation and debugging tool',
+          note: 'Built in 120 minutes with GPT-4',
+        },
+      },
     },
     community: {
       hackweek: {
@@ -89,7 +125,15 @@ export const dictionaries = {
     name: 'Jackie Xiao',
     chineseName: '肖鉴津',
     motto: '爱与自由，毕生所求；学与创造，至死方休',
-    role: '少错科技创始人 / 全栈工程师 / 语音算法工程师 ',
+    role: '01MVP 创始人 / 全栈工程师 / 创客社区主理人',
+    nav: {
+      home: '首页',
+      projects: '项目',
+      community: '社区',
+      about: '关于',
+      blog: '博客',
+      contact: '联系',
+    },
     about: {
       title: '关于我',
       description: '热爱探索和创造的技术爱好者',
@@ -107,7 +151,35 @@ export const dictionaries = {
     projects: {
       title: '项目',
       aiProjects: 'AI驱动的项目',
+      aiNote: '使用 AI 在20-120分钟内完成的项目示例',
       tools: '工具',
+      items: {
+        hackweek: {
+          title: '周周黑客松',
+          description: '快速产品开发的每周黑客松社区',
+          url: 'https://hackathonweekly.com',
+        },
+        mvp: {
+          title: '01MVP',
+          description: '为MVP创造者提供的AI工具和社区',
+          url: 'https://01mvp.com',
+        },
+        voiceClone: {
+          title: '声音克隆工作室',
+          description: '几分钟内创建你的数字声音分身',
+          note: '使用ChatGPT在90分钟内完成',
+        },
+        imageGen: {
+          title: 'AI图像生成器',
+          description: '使用自然语言生成和编辑图片',
+          note: '使用Claude在60分钟内完成',
+        },
+        codeHelper: {
+          title: '代码助手',
+          description: 'AI驱动的代码生成和调试工具',
+          note: '使用GPT-4在120分钟内完成',
+        },
+      },
     },
     community: {
       hackweek: {

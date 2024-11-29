@@ -85,7 +85,7 @@ export default function IndexPage() {
       </AnimatedSection>
 
       {/* Projects Section */}
-      <AnimatedSection delay={200}>
+      <AnimatedSection delay={100}>
         <section id="projects" className="py-8">
           <h2 className="text-3xl font-bold mb-6">{t('projects.title')}</h2>
           <div className="grid gap-6 md:grid-cols-2">
@@ -126,13 +126,20 @@ export default function IndexPage() {
       </AnimatedSection>
 
       {/* Community Section */}
-      <AnimatedSection delay={400}>
+      <AnimatedSection delay={150}>
         <section id="community" className="py-8">
           <h2 className="text-3xl font-bold mb-6">Community</h2>
           <div className="grid gap-6 md:grid-cols-2">
             <Card>
               <CardHeader>
-                <CardTitle>HackathonWeekly</CardTitle>
+                <Link 
+                  href={siteConfig.links.hackweek} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  <CardTitle>HackathonWeekly</CardTitle>
+                </Link>
                 <CardDescription>{t('community.hackweek.description')}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -147,7 +154,14 @@ export default function IndexPage() {
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>01MVP</CardTitle>
+                <Link 
+                  href={siteConfig.links.mvp} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  <CardTitle>01MVP</CardTitle>
+                </Link>
                 <CardDescription>{t('community.mvp.description')}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -165,7 +179,7 @@ export default function IndexPage() {
       </AnimatedSection>
 
       {/* About Section */}
-      <AnimatedSection delay={600}>
+      <AnimatedSection delay={200}>
         <section id="about" className="py-8">
           <h2 className="text-3xl font-bold mb-6">{t('about.title')}</h2>
           <Card>
@@ -198,7 +212,7 @@ export default function IndexPage() {
       </AnimatedSection>
 
       {/* Skills Section */}
-      <AnimatedSection delay={800}>
+      <AnimatedSection delay={250}>
         <section id="skills" className="py-8">
           <h2 className="text-3xl font-bold mb-6">{t('skills.title')}</h2>
           <div className="flex flex-wrap gap-4 items-center">
@@ -235,7 +249,7 @@ export default function IndexPage() {
       </AnimatedSection>
 
       {/* Testimonials Section */}
-      <AnimatedSection delay={1000}>
+      <AnimatedSection delay={300}>
         <section id="testimonials" className="py-8">
           <h2 className="text-3xl font-bold mb-6">{t('testimonials.title')}</h2>
           <Testimonials />
@@ -243,7 +257,7 @@ export default function IndexPage() {
       </AnimatedSection>
 
       {/* Contact Section */}
-      <AnimatedSection delay={1200}>
+      <AnimatedSection delay={350}>
         <section id="contact" className="py-8">
           <h2 className="text-3xl font-bold mb-6">{t('contact.title')}</h2>
           <div className="max-w-xl mx-auto">

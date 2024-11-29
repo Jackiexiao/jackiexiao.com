@@ -3,13 +3,14 @@
 import { useLanguage } from "@/components/language-provider"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
+import Image from 'next/image'
 
 type Testimonial = {
   id: number
   name: string
   role: string
   content: string
-  avatar: string
+  seed: string
 }
 
 export function Testimonials() {
@@ -21,21 +22,21 @@ export function Testimonials() {
       name: "Alex Chen",
       role: "HackWeek Participant",
       content: t("testimonials.1"),
-      avatar: "/testimonials/1.jpg",
+      seed: "alexchen",
     },
     {
       id: 2,
       name: "Sarah Zhang",
       role: "01MVP User",
       content: t("testimonials.2"),
-      avatar: "/testimonials/2.jpg",
+      seed: "sarahzhang",
     },
     {
       id: 3,
       name: "Mike Wang",
       role: "Community Member",
       content: t("testimonials.3"),
-      avatar: "/testimonials/3.jpg",
+      seed: "mikewang",
     },
   ]
 
@@ -51,8 +52,14 @@ export function Testimonials() {
           <Card className="h-full bg-card/50 backdrop-blur hover:shadow-md transition-shadow">
             <CardContent className="p-6">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="relative w-10 h-10">
-                  <div className="w-10 h-10 rounded-full bg-primary/10" />
+                <div className="relative w-12 h-12">
+                  <Image
+                    src={`https://api.dicebear.com/9.x/notionists/svg?seed=${testimonial.seed}`}
+                    alt={testimonial.name}
+                    width={48}
+                    height={48}
+                    className="rounded-full"
+                  />
                 </div>
                 <div>
                   <div className="font-medium">{testimonial.name}</div>

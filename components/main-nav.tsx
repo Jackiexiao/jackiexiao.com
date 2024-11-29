@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -5,12 +7,15 @@ import Image from 'next/image'
 import { NavItem } from '@/types/nav'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
+import { useLanguage } from '@/components/language-provider'
 
 interface MainNavProps {
   items?: NavItem[]
 }
 
 export function MainNav({ items }: MainNavProps) {
+  const { t } = useLanguage()
+
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="flex items-center space-x-2">
@@ -36,7 +41,7 @@ export function MainNav({ items }: MainNavProps) {
                   'hover:text-foreground'
                 )}
               >
-                {item.title}
+                {t(`nav.${item.title.toLowerCase()}`)}
               </Link>
             ) : null
           ))}

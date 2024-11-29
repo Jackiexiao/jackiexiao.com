@@ -5,27 +5,27 @@ export const siteConfig = {
   description: "Jackie Xiao's personal website - Full-stack developer, AI enthusiast, and founder of 01MVP",
   mainNav: [
     {
-      title: "Home",
+      title: "home",
       href: "/",
     },
     {
-      title: "Projects",
+      title: "projects",
       href: "/#projects",
     },
     {
-      title: "Community",
+      title: "community",
       href: "/#community",
     },
     {
-      title: "About",
+      title: "about",
       href: "/#about",
     },
     {
-      title: "Blog",
+      title: "blog",
       href: "https://blog.jackiexiao.com",
     },
     {
-      title: "Contact",
+      title: "contact",
       href: "/#contact",
     },
   ],
@@ -35,7 +35,7 @@ export const siteConfig = {
     blog: "https://blog.jackiexiao.com",
     email: "jackie.xiao@outlook.com",
     wechat: "jackiexiao",
-    hackweek: "https://hackweek.cn",
+    hackweek: "https://hackathonweekly.com",
     mvp: "https://01mvp.com",
   },
 }

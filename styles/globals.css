@@ -53,6 +53,53 @@
     --terminal-magenta: 300 85% 50%;
   }
 
+  .dark {
+    /* 暗色背景 */
+    --background: 220 25% 10%;
+    --foreground: 220 30% 96%;
+
+    /* 暗色卡片背景 */
+    --card: 220 25% 15%;
+    --card-foreground: 220 30% 96%;
+
+    /* 暗色弹出层 */
+    --popover: 220 25% 15%;
+    --popover-foreground: 220 30% 96%;
+
+    /* 主色调：科技蓝（调暗） */
+    --primary: 220 85% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* 次要色调：深灰 */
+    --secondary: 220 25% 20%;
+    --secondary-foreground: 220 30% 96%;
+
+    /* 静音色调 */
+    --muted: 220 25% 20%;
+    --muted-foreground: 220 30% 60%;
+
+    /* 强调色：暗蓝色 */
+    --accent: 220 85% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* 危险色：暗红色 */
+    --destructive: 0 85% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* 边框和输入框 */
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 220 85% 45%;
+
+    /* Terminal specific colors - 暗色主题调整 */
+    --terminal-green: 142 60% 40%;
+    --terminal-yellow: 40 75% 45%;
+    --terminal-blue: 220 75% 45%;
+    --terminal-red: 0 75% 50%;
+    --terminal-cyan: 180 60% 40%;
+    --terminal-magenta: 300 75% 45%;
+  }
+
   * {
     @apply border-border;
     font-family: 'JetBrains Mono', monospace;
@@ -73,11 +120,16 @@
   }
 
   .terminal-card {
-    @apply border border-[hsl(var(--terminal-green))/30] bg-card/30 p-4;
+    @apply border border-[hsl(var(--terminal-green))/30] bg-card/30 p-4 
+           hover:border-[hsl(var(--terminal-green))/60] transition-all duration-300
+           transform hover:-translate-y-1 hover:shadow-lg;
   }
 
   .terminal-header {
-    @apply text-[hsl(var(--terminal-green))] font-bold;
+    @apply text-[hsl(var(--terminal-green))] font-bold
+           relative after:content-[''] after:absolute after:bottom-0 after:left-0
+           after:w-0 after:h-0.5 after:bg-[hsl(var(--terminal-green))]
+           hover:after:w-full after:transition-all after:duration-300;
   }
 
   .terminal-text {
@@ -86,23 +138,28 @@
 
   .terminal-link {
     @apply text-[hsl(var(--terminal-blue))] no-underline 
-           hover:text-[hsl(var(--terminal-cyan))] transition-colors
+           hover:text-[hsl(var(--terminal-cyan))] transition-colors duration-300
            border-b border-[hsl(var(--terminal-blue))/30]
-           hover:border-[hsl(var(--terminal-cyan))];
+           hover:border-[hsl(var(--terminal-cyan))]
+           relative after:content-[''] after:absolute after:bottom-0 after:left-0
+           after:w-0 after:h-0.5 after:bg-[hsl(var(--terminal-cyan))]
+           hover:after:w-full after:transition-all after:duration-300;
   }
 
   .terminal-button {
     @apply bg-[hsl(var(--terminal-green))/20] text-[hsl(var(--terminal-green))] 
            font-medium py-2 px-4 border border-[hsl(var(--terminal-green))/30]
-           hover:bg-[hsl(var(--terminal-green))/30] transition-colors
-           focus:outline-none focus:ring-1 focus:ring-[hsl(var(--terminal-green))];
+           hover:bg-[hsl(var(--terminal-green))/30] transition-all duration-300
+           focus:outline-none focus:ring-1 focus:ring-[hsl(var(--terminal-green))]
+           transform hover:-translate-y-0.5 active:translate-y-0
+           hover:shadow-md active:shadow-sm;
   }
 
   .terminal-input {
     @apply bg-background/50 border border-[hsl(var(--terminal-green))/30]
            text-foreground p-2 w-full
            focus:outline-none focus:ring-1 focus:ring-[hsl(var(--terminal-green))]
-           hover:border-[hsl(var(--terminal-green))/50];
+           hover:border-[hsl(var(--terminal-green))/50] transition-all duration-300;
   }
 
   .terminal-progress {
@@ -125,7 +182,9 @@
 
   .terminal-window {
     @apply border border-[hsl(var(--terminal-green))/30] rounded-md
-           overflow-hidden backdrop-blur-sm bg-card/30;
+           overflow-hidden backdrop-blur-sm bg-card/30
+           hover:border-[hsl(var(--terminal-green))/60] transition-all duration-300
+           hover:shadow-lg;
   }
 
   .terminal-window-header {
@@ -139,7 +198,8 @@
   }
 
   .terminal-window-button {
-    @apply w-2 h-2 rounded-full opacity-50;
+    @apply w-2 h-2 rounded-full opacity-50 transition-opacity duration-300
+           hover:opacity-100;
   }
 
   .terminal-window-content {
@@ -149,10 +209,80 @@
   /* 代码块样式 */
   pre {
     @apply bg-[hsl(var(--background))] border border-[hsl(var(--terminal-green))/30]
-           p-4 rounded-md overflow-x-auto;
+           p-4 rounded-md overflow-x-auto transition-all duration-300
+           hover:border-[hsl(var(--terminal-green))/60] hover:shadow-md;
   }
 
   code {
     @apply text-[hsl(var(--terminal-green))] text-sm;
+  }
+
+  /* 响应式设计优化 */
+  @screen sm {
+    .terminal-card {
+      @apply p-6;
+    }
+
+    .terminal-window {
+      @apply rounded-lg;
+    }
+  }
+
+  @screen md {
+    .terminal-card {
+      @apply p-8;
+    }
+  }
+
+  /* 动画类 */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300 hover:shadow-lg;
+  }
+
+  .hover-underline {
+    @apply relative after:content-[''] after:absolute after:bottom-0 after:left-0
+           after:w-0 after:h-0.5 after:bg-current
+           hover:after:w-full after:transition-all after:duration-300;
+  }
+
+  /* 技术栈图标动画 */
+  .tech-icon {
+    @apply transition-all duration-300 hover:scale-110 hover:rotate-3
+           filter hover:brightness-110;
+  }
+
+  /* 滚动条美化 */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[hsl(var(--terminal-green))/30] rounded-full
+           hover:bg-[hsl(var(--terminal-green))/50];
+  }
+
+  /* 暗色主题特定样式 */
+  .dark .terminal-card {
+    @apply bg-card/50;
+  }
+
+  .dark .terminal-window {
+    @apply bg-card/50;
+  }
+
+  .dark .terminal-button {
+    @apply hover:bg-[hsl(var(--terminal-green))/40];
+  }
+
+  .dark .terminal-input {
+    @apply bg-background/70;
   }
 }
