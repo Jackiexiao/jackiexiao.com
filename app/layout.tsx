@@ -86,6 +86,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <div className="relative flex min-h-screen flex-col">
                 <SiteHeader />
                 <div className="flex-1">{children}</div>
+                <footer className="py-4 text-center text-sm text-gray-500">
+                  <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+                    粤ICP备2022122081号-1
+                  </a>
+                </footer>
               </div>
               <TailwindIndicator />
             </LanguageProvider>
