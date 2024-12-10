@@ -17,7 +17,7 @@ export function MainNav({ items }: MainNavProps) {
   const { t } = useLanguage()
 
   return (
-    <div className="flex gap-6 md:gap-10">
+    <div className="hidden md:flex gap-6 md:gap-10">
       <Link href="/" className="flex items-center space-x-2">
         <div className="relative w-6 h-6 rounded-full overflow-hidden">
           <Image

@@ -17,13 +17,13 @@ export default function IndexPage() {
     <div className="container pb-8 pt-6 md:py-10">
       {/* Hero Section */}
       <AnimatedSection>
-        <section className="flex flex-col-reverse md:flex-row items-center gap-6 pb-8 pt-6">
-          <div className="flex-1 space-y-4">
-            <h1 className="text-4xl font-bold">{t('name')}</h1>
-            <h2 className="text-2xl text-muted-foreground">{t('chineseName')}</h2>
-            <p className="text-xl font-medium">{t('motto')}</p>
-            <p className="text-lg text-muted-foreground">{t('role')}</p>
-            <div className="flex flex-wrap gap-4 items-center mt-4">
+        <section className="flex flex-col-reverse md:flex-row items-center gap-4 md:gap-6 pb-4 md:pb-8 pt-4 md:pt-6">
+          <div className="flex-1 space-y-3 md:space-y-4 text-center md:text-left">
+            <h1 className="text-3xl md:text-4xl font-bold">{t('name')}</h1>
+            <h2 className="text-xl md:text-2xl text-muted-foreground">{t('chineseName')}</h2>
+            <p className="text-lg md:text-xl font-medium">{t('motto')}</p>
+            <p className="text-base md:text-lg text-muted-foreground">{t('role')}</p>
+            <div className="flex flex-wrap gap-3 md:gap-4 items-center mt-4 justify-center md:justify-start">
               <Link
                 href={siteConfig.links.github}
                 target="_blank"
@@ -40,39 +40,39 @@ export default function IndexPage() {
               >
                 Blog
               </Link>
-              <div className="flex gap-4 items-center ml-4">
+              <div className="flex gap-3 md:gap-4 items-center mt-3 md:mt-0 md:ml-4">
                 <Image
                   src="/tech/python.svg"
                   alt="Python"
-                  width={24}
-                  height={24}
-                  className="opacity-70 hover:opacity-100 transition-opacity"
+                  width={20}
+                  height={20}
+                  className="opacity-70 hover:opacity-100 transition-opacity md:w-6 md:h-6"
                 />
                 <Image
                   src="/tech/pytorch.svg"
                   alt="PyTorch"
-                  width={24}
-                  height={24}
-                  className="opacity-70 hover:opacity-100 transition-opacity"
+                  width={20}
+                  height={20}
+                  className="opacity-70 hover:opacity-100 transition-opacity md:w-6 md:h-6"
                 />
                 <Image
                   src="/tech/nextjs.svg"
                   alt="Next.js"
-                  width={24}
-                  height={24}
-                  className="opacity-70 hover:opacity-100 transition-opacity"
+                  width={20}
+                  height={20}
+                  className="opacity-70 hover:opacity-100 transition-opacity md:w-6 md:h-6"
                 />
                 <Image
                   src="/tech/react.svg"
                   alt="React"
-                  width={24}
-                  height={24}
-                  className="opacity-70 hover:opacity-100 transition-opacity"
+                  width={20}
+                  height={20}
+                  className="opacity-70 hover:opacity-100 transition-opacity md:w-6 md:h-6"
                 />
               </div>
             </div>
           </div>
-          <div className="relative w-48 h-48 md:w-64 md:h-64">
+          <div className="relative w-40 h-40 md:w-64 md:h-64 mb-4 md:mb-0">
             <Image
               src="/avatar.jpg"
               alt="Jackie Xiao"
@@ -86,9 +86,9 @@ export default function IndexPage() {
 
       {/* Projects Section */}
       <AnimatedSection delay={100}>
-        <section id="projects" className="py-8">
-          <h2 className="text-3xl font-bold mb-6">{t('projects.title')}</h2>
-          <div className="grid gap-6 md:grid-cols-2">
+        <section id="projects" className="py-4 md:py-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">{t('projects.title')}</h2>
+          <div className="grid gap-4 md:gap-6 md:grid-cols-2">
             <Card>
               <CardHeader>
                 <CardTitle>{t('projects.aiProjects')}</CardTitle>
