@@ -20,14 +20,14 @@ export function Testimonials() {
     {
       id: 1,
       name: "Alex Chen",
-      role: "HackWeek Participant",
+      role: "Community Member",
       content: t("testimonials.1"),
       seed: "alexchen",
     },
     {
       id: 2,
       name: "Sarah Zhang",
-      role: "01MVP User",
+      role: "Community Member",
       content: t("testimonials.2"),
       seed: "sarahzhang",
     },

@@ -132,9 +132,9 @@ export default function IndexPage() {
           <div className="grid gap-6 md:grid-cols-2">
             <Card>
               <CardHeader>
-                <Link 
-                  href={siteConfig.links.hackweek} 
-                  target="_blank" 
+                <Link
+                  href="https://hackweek.cn"
+                  target="_blank"
                   rel="noreferrer"
                   className="hover:text-primary transition-colors"
                 >
@@ -146,28 +146,6 @@ export default function IndexPage() {
                 <Image
                   src="/hackweek-logo.jpg"
                   alt="HackathonWeekly Logo"
-                  width={200}
-                  height={200}
-                  className="rounded-lg"
-                />
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <Link 
-                  href={siteConfig.links.mvp} 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
-                  <CardTitle>01MVP</CardTitle>
-                </Link>
-                <CardDescription>{t('community.mvp.description')}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Image
-                  src="/01mvp-logo.jpg"
-                  alt="01MVP Logo"
                   width={200}
                   height={200}
                   className="rounded-lg"
@@ -249,12 +227,12 @@ export default function IndexPage() {
       </AnimatedSection>
 
       {/* Testimonials Section */}
-      <AnimatedSection delay={300}>
+      {/* <AnimatedSection delay={300}>
         <section id="testimonials" className="py-8">
           <h2 className="text-3xl font-bold mb-6">{t('testimonials.title')}</h2>
           <Testimonials />
         </section>
-      </AnimatedSection>
+      </AnimatedSection> */}
 
       {/* Contact Section */}
       <AnimatedSection delay={350}>

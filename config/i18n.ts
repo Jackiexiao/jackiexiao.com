@@ -10,7 +10,7 @@ export const dictionaries = {
     name: 'Jackie Xiao',
     chineseName: '肖鉴津',
     motto: 'Love and freedom, lifelong pursuit; learning and creation, until death',
-    role: 'Founder of 01mvp.com / Full-stack Developer',
+    role: 'Founder of HackathonWeekly / Full-stack Developer',
     nav: {
       home: 'Home',
       projects: 'Projects',
@@ -44,11 +44,6 @@ export const dictionaries = {
           description: 'Weekly hackathon community for rapid product development',
           url: 'https://hackathonweekly.com',
         },
-        mvp: {
-          title: '01MVP',
-          description: 'AI-powered tools and community for MVP builders',
-          url: 'https://01mvp.com',
-        },
         voiceClone: {
           title: 'Voice Clone Studio',
           description: 'Create your digital voice twin in minutes',
@@ -70,10 +65,6 @@ export const dictionaries = {
       hackweek: {
         title: 'HackathonWeekly',
         description: 'Take 1 week to create 1 MVP, solve 1 pain point, and maybe it will be the next world-changing product. Founded by Jackie Xiao.',
-      },
-      mvp: {
-        title: '01MVP',
-        description: 'From 0 to 1, turn ideas into products quickly. AI-driven tools and creator community to help makers build MVPs in the shortest time. Founded by Jackie Xiao.',
       },
     },
     skills: {
@@ -117,7 +108,7 @@ export const dictionaries = {
     testimonials: {
       title: 'Community Feedback',
       1: 'Jackie helped me turn my idea into a working product in just one week through HackWeek. His guidance was invaluable!',
-      2: '01MVP\'s AI tools significantly accelerated our MVP development process. Jackie\'s vision for rapid product development is revolutionary.',
+      2: ' AI tools significantly accelerated our MVP development process. Jackie\'s vision for rapid product development is revolutionary.',
       3: 'The community Jackie built is incredibly supportive. Everyone helps each other grow and succeed.',
     },
   },
@@ -125,7 +116,7 @@ export const dictionaries = {
     name: 'Jackie Xiao',
     chineseName: '肖鉴津',
     motto: '爱与自由，毕生所求；学与创造，至死方休',
-    role: '01MVP 创始人 / 全栈工程师 / 创客社区主理人',
+    role: ' 周周黑客松发起人 / 全栈工程师',
     nav: {
       home: '首页',
       projects: '项目',
@@ -159,11 +150,6 @@ export const dictionaries = {
           description: '快速产品开发的每周黑客松社区',
           url: 'https://hackathonweekly.com',
         },
-        mvp: {
-          title: '01MVP',
-          description: '为MVP创造者提供的AI工具和社区',
-          url: 'https://01mvp.com',
-        },
         voiceClone: {
           title: '声音克隆工作室',
           description: '几分钟内创建你的数字声音分身',
@@ -185,10 +171,6 @@ export const dictionaries = {
       hackweek: {
         title: '周周黑客松',
         description: '花1周时间，创造1个最小可行产品，解决1个生活痛点，也许就是下1个改变世界的起点。由Jackie Xiao发起。',
-      },
-      mvp: {
-        title: '01MVP',
-        description: '从0到1，让创意快速变成产品。01MVP 通过 AI 驱动的工具和创造者社区，帮助创造者用最短时间打造最小可行产品（MVP）。由Jackie Xiao发起。',
       },
     },
     skills: {
@@ -232,7 +214,7 @@ export const dictionaries = {
     testimonials: {
       title: '社区反馈',
       1: '通过周周黑客松，Jackie帮助我在一周内将想法变成了可用的产品。他的指导非常宝贵！',
-      2: '01MVP的AI工具显著加快了我们的MVP开发过程。Jackie对快速产品开发的愿景是革命性的。',
+      2: 'AI工具显著加快了我们的MVP开发过程。Jackie对快速产品开发的愿景是革命性的。',
       3: 'Jackie建立的社区非常有支持性。每个人都在互相帮助，共同成长。',
     },
   },

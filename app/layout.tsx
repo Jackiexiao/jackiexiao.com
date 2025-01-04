@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     "Jackie Xiao",
     "Full Stack Developer",
     "AI Engineer",
-    "01MVP",
     "HackathonWeekly",
     "Voice Algorithm Engineer",
   ],

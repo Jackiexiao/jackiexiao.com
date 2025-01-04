@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
   name: "jackiexiao极客",
-  description: "Jackie Xiao's personal website - Full-stack developer, AI enthusiast, and founder of 01MVP",
+  description: "Jackie Xiao's personal website - Full-stack developer, AI enthusiast, and founder of HackathonWeekly.",
   mainNav: [
     {
       title: "home",
@@ -35,7 +35,6 @@ export const siteConfig = {
     blog: "https://blog.jackiexiao.com",
     email: "jackie.xiao@outlook.com",
     wechat: "jackiexiao",
-    hackweek: "https://hackathonweekly.com",
-    mvp: "https://01mvp.com",
+    hackweek: "https://hackweek.cn",
   },
 }
